@@ -58,8 +58,8 @@ export default function Home() {
         <meta
           name="description"
           content="It's a little summary about me + links. Let's work together on a project!"
-        >
-        <meta property="og:image" content="https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b6acb8586b9f46ec293ebbcab4b23881.jpg">
+        />
+        <meta property="og:image" content="https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b6acb8586b9f46ec293ebbcab4b23881.jpg"/>
 				<link rel="canonical" href="/" />
       </Helmet>
       <main>
