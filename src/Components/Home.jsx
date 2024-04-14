@@ -54,13 +54,13 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Indra</title>
+        <title>Indra Ansari's Portfolio</title>
         <meta
-          name="og:description"
-          content="It's a little summary about me + links !"
+          name="description"
+          content="It's a little summary about me + links. Let's work together on a project!"
         />
         <meta
-          name="og:image"
+          name="image"
           content="https://firebasestorage.googleapis.com/v0/b/portfolio-c5afc.appspot.com/o/meta-img%2Fscreenshot-2024-04-15-004100-661c072b76046.webp?alt=media&token=3daea2b1-271b-4016-bab2-aed89f94afc0"
         />
       </Helmet>
