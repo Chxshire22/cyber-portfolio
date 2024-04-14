@@ -207,17 +207,17 @@ main {
   }
 }
 
-@media screen and (min-height:650px){
+@media screen and (min-height:650px) and (min-width: 768px) {
 	.right{
 		margin-top: -2rem;
 	}
 }
-@media screen and (min-height:850px){
+@media screen and (min-height:850px) and (min-width: 768px) {
 	.right{
 		margin-top: -3rem;
 	}
 }
-@media screen and (min-height:900px){
+@media screen and (min-height:900px) and (min-width: 768px) {
 	.right{
 		margin-top: -5rem;
 	}
@@ -228,7 +228,7 @@ main {
 		margin-top: -8rem;
 	}
 }
-@media screen and (min-height:1150px){
+@media screen and (min-height:1150px) and (min-width: 768px) {
 	.right{
 		margin-top: -10rem;
 	}
