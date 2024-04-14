@@ -160,7 +160,7 @@ export default function Home() {
                   } else {
                     setProjectIndex((prev) => prev - 1);
                   }
-                  clickAudio.volume = 0.2;
+                  clickAudio.volume = 0.05;
                   clickAudio.play();
                 }}
               />
@@ -173,7 +173,7 @@ export default function Home() {
                   } else {
                     setProjectIndex((prev) => prev + 1);
                   }
-                  clickAudio.volume = 0.2;
+                  clickAudio.volume = 0.05;
                   clickAudio.play();
                 }}
               />
