@@ -34,7 +34,6 @@ export default function Home() {
 			const q = query(collection(db, "projects"));
 			const querySnapshot = await getDocs(q);
 			querySnapshot.forEach((doc) => {
-				console.log(doc.id, " => ", doc.data());
 				setProjectsArr((prev) => [...prev, doc.data()]);
 			});
 		})();
@@ -50,7 +49,6 @@ export default function Home() {
 				deployment: projectsArr[projectIndex]?.deployment_url,
 			});
 		}
-		console.log(projectIndex)
 	}, [projectsArr, projectIndex]);
 
 	let clickAudio = new Audio("/click-47609.mp3")
@@ -107,7 +105,8 @@ export default function Home() {
           <p>
             My toolkit includes:
             <br />
-            React, Express, NodeJs, NextJs
+            React, Express, NodeJs, NextJs <br />
+						However, I will always select the best tool for the job at hand, even if it means learning a new language or framework.
           </p>
         </div>
       </section>
