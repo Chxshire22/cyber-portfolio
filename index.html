@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,5 +9,38 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <form
+      id="contact-form"
+      name="contact"
+      className="block"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <div className="block-header">
+        <h4>or just leave a message:</h4>
+      </div>
+      <section className="block-content">
+        <input type="text" id="no" />
+        <label htmlFor="email-input"> Email: </label>
+        <input
+          id="email-input"
+          type="text"
+          required
+          autofocus
+          placeholder="mail@gmail.com"
+        />
+        <label htmlFor="contact-input">Your message</label>
+        <textarea
+          name=""
+          required
+          id="contact-input"
+          cols="30"
+          rows="10"
+          placeholder="Hi, I was wondering if you can help me build a [insert site]"
+        ></textarea>
+      </section>
+      <button type="submit" id="submit-btn">submit</button>
+    </form>
   </body>
 </html>

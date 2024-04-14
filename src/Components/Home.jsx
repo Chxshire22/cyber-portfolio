@@ -1,59 +1,59 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faCopy,
-	faArrowUpRightFromSquare,
-	faUser,
-	faArrowLeft,
-	faArrowRight,
+  faCopy,
+  faArrowUpRightFromSquare,
+  faUser,
+  faArrowLeft,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import pfp from "../assets/photo1712915487.jpeg";
 import { useState, useEffect } from "react";
 import {
-	collection,
-	query,
-	doc,
-	setDoc,
-	where,
-	getDocs,
+  collection,
+  query,
+  doc,
+  setDoc,
+  where,
+  getDocs,
 } from "firebase/firestore";
 import { db } from "../lib/firebase";
 
 export default function Home() {
-	const [projectsArr, setProjectsArr] = useState([]);
-	const [currentProject, setCurrentProject] = useState({
-		title: "",
-		description: "",
-		imgUrl: "",
-		githubRepo: "",
-		deployment: "",
-	});
-	const [projectIndex, setProjectIndex] = useState(0);
+  const [projectsArr, setProjectsArr] = useState([]);
+  const [currentProject, setCurrentProject] = useState({
+    title: "",
+    description: "",
+    imgUrl: "",
+    githubRepo: "",
+    deployment: "",
+  });
+  const [projectIndex, setProjectIndex] = useState(0);
 
-	useEffect(() => {
-		(async () => {
-			const q = query(collection(db, "projects"));
-			const querySnapshot = await getDocs(q);
-			querySnapshot.forEach((doc) => {
-				setProjectsArr((prev) => [...prev, doc.data()]);
-			});
-		})();
-	}, []);
+  useEffect(() => {
+    (async () => {
+      const q = query(collection(db, "projects"));
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        setProjectsArr((prev) => [...prev, doc.data()]);
+      });
+    })();
+  }, []);
 
-	useEffect(() => {
-		if (projectsArr) {
-			setCurrentProject({
-				title: projectsArr[projectIndex]?.title,
-				description: projectsArr[projectIndex]?.description,
-				imgUrl: projectsArr[projectIndex]?.screenshot_url,
-				githubRepo: projectsArr[projectIndex]?.github_repo_url,
-				deployment: projectsArr[projectIndex]?.deployment_url,
-			});
-		}
-	}, [projectsArr, projectIndex]);
+  useEffect(() => {
+    if (projectsArr) {
+      setCurrentProject({
+        title: projectsArr[projectIndex]?.title,
+        description: projectsArr[projectIndex]?.description,
+        imgUrl: projectsArr[projectIndex]?.screenshot_url,
+        githubRepo: projectsArr[projectIndex]?.github_repo_url,
+        deployment: projectsArr[projectIndex]?.deployment_url,
+      });
+    }
+  }, [projectsArr, projectIndex]);
 
-	let clickAudio = new Audio("/click-47609.mp3")
+  let clickAudio = new Audio("/click-47609.mp3");
 
-	return (
+  return (
     <main>
       {/* PROFILE */}
       <div id="profile__container">
@@ -106,7 +106,8 @@ export default function Home() {
             My toolkit includes:
             <br />
             React, Express, NodeJs, NextJs <br />
-						However, I will always select the best tool for the job at hand, even if it means learning a new language or framework.
+            However, I will always select the best tool for the job at hand,
+            even if it means learning a new language or framework.
           </p>
         </div>
       </section>
@@ -194,7 +195,11 @@ export default function Home() {
             </p>
           </a>
           <div>
-            <p>Phone</p>
+            <a href=" https://t.me/chxshire22" target="_blank">
+              <p>
+                Telegram <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </p>
+            </a>
           </div>
           <a href="https://github.com/Chxshire22" target="_blank">
             <p>
@@ -225,6 +230,40 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <form
+        id="contact-form"
+        method="post"
+        name="contact"
+        className="block"
+      >
+        <div className="block-header">
+          <h4>or just leave a message:</h4>
+        </div>
+        <section className="block-content">
+          <input type="hidden" name="form-name" value="contact" />
+          <label htmlFor="email-input"> Email: </label>
+          <input
+            id="email-input"
+            type="text"
+            required
+            autoFocus
+            placeholder="mail@gmail.com"
+          />
+          <label htmlFor="contact-input">Your message</label>
+          <textarea
+            name=""
+            required
+            id="contact-input"
+            cols="30"
+            rows="10"
+            placeholder="Hi, I was wondering if you can help me build a [insert site]"
+          ></textarea>
+        </section>
+        <button type="submit" id="submit-btn">
+          submit
+        </button>
+      </form>
     </main>
   );
 }
