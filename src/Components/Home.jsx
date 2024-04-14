@@ -213,13 +213,15 @@ export default function Home() {
           <h4>Copy This Portfolio Url</h4>
         </div>
         <div className="block-content">
-          <p id="copy-url" onClick={()=>{
-						navigator.clipboard.writeText("https://661bb854dc2f1f544168ebc8--indransari.netlify.app/")
-						clickAudio.volume = 0.2;
-						clickAudio.play();
-					
-					}}>
-            https://661bb854dc2f1f544168ebc8--indransari.netlify.app/
+          <p
+            id="copy-url"
+            onClick={() => {
+              navigator.clipboard.writeText("https://indransari.netlify.app/");
+              clickAudio.volume = 0.2;
+              clickAudio.play();
+            }}
+          >
+            https://indransari.netlify.app/
             <FontAwesomeIcon icon={faCopy} />
           </p>
         </div>
