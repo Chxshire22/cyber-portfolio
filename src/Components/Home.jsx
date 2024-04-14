@@ -58,11 +58,9 @@ export default function Home() {
         <meta
           name="description"
           content="It's a little summary about me + links. Let's work together on a project!"
-        />
-        <meta
-          name="image"
-          content="https://firebasestorage.googleapis.com/v0/b/portfolio-c5afc.appspot.com/o/meta-img%2Fscreenshot-2024-04-15-004100-661c072b76046.webp?alt=media&token=3daea2b1-271b-4016-bab2-aed89f94afc0"
-        />
+        >
+        <meta property="og:image" content="https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b6acb8586b9f46ec293ebbcab4b23881.jpg">
+				<link rel="canonical" href="/" />
       </Helmet>
       <main>
         {/* PROFILE */}
