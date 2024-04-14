@@ -54,9 +54,10 @@ export default function Home() {
   let clickAudio = new Audio("/click-47609.mp3");
 
   return (
+		<>
     <main>
       {/* PROFILE */}
-      <div id="profile__container">
+      <div id="profile__container" >
         {" "}
         <h1 className="name" id="name">
           Indra Ansari
@@ -181,85 +182,86 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="block" id="contact">
-        <div className="block-header">
-          <h4>Contact</h4>
-        </div>
-        <div className="block-content two-x-two-grid">
-          <a
-            href="https://www.linkedin.com/in/indra-ansari-70486719b/"
-            target="_blank"
-          >
-            <p>
-              LinkedIn <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            </p>
-          </a>
-          <div>
-            <a href=" https://t.me/chxshire22" target="_blank">
-              <p>
-                Telegram <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </p>
-            </a>
-          </div>
-          <a href="https://github.com/Chxshire22" target="_blank">
-            <p>
-              Github <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            </p>
-          </a>
-          <a href="mailto:akuindra22@gmail.com?subject=Hello, I Would Like To Connect&body=Hi, I am [insert name] and would like to contact you on possibly working together">
-            <p>Gmail</p>
-          </a>
-        </div>
-      </section>
-
-      <section className="block" id="url">
-        <div className="block-header">
-          <h4>Copy This Portfolio Url</h4>
-        </div>
-        <div className="block-content">
-          <p
-            id="copy-url"
-            onClick={() => {
-              navigator.clipboard.writeText("https://indransari.netlify.app/");
-              clickAudio.volume = 0.2;
-              clickAudio.play();
-            }}
-          >
-            https://indransari.netlify.app/
-            <FontAwesomeIcon icon={faCopy} />
-          </p>
-        </div>
-      </section>
-
-      <form id="contact-form" method="post" name="contact" className="block">
-        <div className="block-header">
-          <h4>or just leave a message:</h4>
-        </div>
-        <section className="block-content">
-          <input type="hidden" name="form-name" value="contact" />
-          <label htmlFor="email-input"> Email: </label>
-          <input
-            id="email-input"
-            type="email"
-            required
-            autoFocus
-            placeholder="mail@gmail.com"
-            name="email-input"
-          />
-          <label htmlFor="contact-input">Your message</label>
-          <textarea
-            name="contact-input"
-            required
-            id="contact-input"
-            cols="30"
-            rows="10"
-            placeholder="Hi, I was wondering if you can help me build a [insert site]"
-          ></textarea>
-        </section>
-        <button type="submit" id="submit-btn">
-          submit
-        </button>
-      </form>
+      <div className="right">
+				<section className="block" id="contact">
+					<div className="block-header">
+						<h4>Contact</h4>
+					</div>
+					<div className="block-content two-x-two-grid">
+						<a
+							href="https://www.linkedin.com/in/indra-ansari-70486719b/"
+							target="_blank"
+						>
+							<p>
+								LinkedIn <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+							</p>
+						</a>
+						<div>
+							<a href=" https://t.me/chxshire22" target="_blank">
+								<p>
+									Telegram <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+								</p>
+							</a>
+						</div>
+						<a href="https://github.com/Chxshire22" target="_blank">
+							<p>
+								Github <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+							</p>
+						</a>
+						<a href="mailto:akuindra22@gmail.com?subject=Hello, I Would Like To Connect&body=Hi, I am [insert name] and would like to contact you on possibly working together">
+							<p>Gmail</p>
+						</a>
+					</div>
+				</section>
+				<section className="block" id="url">
+					<div className="block-header">
+						<h4>Copy This Portfolio Url</h4>
+					</div>
+					<div className="block-content">
+						<p
+							id="copy-url"
+							onClick={() => {
+								navigator.clipboard.writeText("https://indransari.netlify.app/");
+								clickAudio.volume = 0.2;
+								clickAudio.play();
+							}}
+						>
+							https://indransari.netlify.app/
+							<FontAwesomeIcon icon={faCopy} />
+						</p>
+					</div>
+				</section>
+				<form id="contact-form" method="post" name="contact" className="block">
+					<div className="block-header">
+						<h4>or just leave a message:</h4>
+					</div>
+					<section className="block-content">
+						<input type="hidden" name="form-name" value="contact" />
+						<label htmlFor="email-input"> Your email: </label>
+						<input
+							id="email-input"
+							type="email"
+							required
+							autoFocus
+							placeholder="mail@gmail.com"
+							name="email-input"
+						/>
+						<label htmlFor="contact-input">Your message</label>
+						<textarea
+							name="contact-input"
+							required
+							id="contact-input"
+							cols="30"
+							rows="10"
+							placeholder="Hi, I was wondering if you can help me build a [insert site]"
+						></textarea>
+					</section>
+					<button type="submit" id="submit-btn">
+						submit
+					</button>
+				</form>
+			</div>
     </main>
+		</>
   );
 }
