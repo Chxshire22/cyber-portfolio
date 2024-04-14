@@ -231,12 +231,7 @@ export default function Home() {
         </div>
       </section>
 
-      <form
-        id="contact-form"
-        method="post"
-        name="contact"
-        className="block"
-      >
+      <form id="contact-form" method="post" name="contact" className="block">
         <div className="block-header">
           <h4>or just leave a message:</h4>
         </div>
@@ -245,14 +240,15 @@ export default function Home() {
           <label htmlFor="email-input"> Email: </label>
           <input
             id="email-input"
-            type="text"
+            type="email"
             required
             autoFocus
             placeholder="mail@gmail.com"
+            name="email-input"
           />
           <label htmlFor="contact-input">Your message</label>
           <textarea
-            name=""
+            name="contact-input"
             required
             id="contact-input"
             cols="30"
