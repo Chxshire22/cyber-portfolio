@@ -231,7 +231,7 @@ export default function Home() {
                   navigator.clipboard.writeText(
                     "https://indransari.netlify.app/"
                   );
-                  clickAudio.volume = 0.2;
+                  clickAudio.volume = 0.05;
                   clickAudio.play();
                 }}
               >
