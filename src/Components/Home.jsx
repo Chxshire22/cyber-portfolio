@@ -256,7 +256,6 @@ export default function Home() {
                 id="email-input"
                 type="email"
                 required
-                autoFocus
                 placeholder="mail@gmail.com"
                 name="email-input"
               />
