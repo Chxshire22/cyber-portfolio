@@ -96,7 +96,7 @@ export default function Home() {
                 {" "}
                 Blog (WIP) <FontAwesomeIcon icon={faArrowUpRightFromSquare} />{" "}
               </a>{" "}
-              |
+              |{" "}
               <a
                 href="https://www.instagram.com/eternl_sunshine/"
                 target="_blank"
@@ -236,7 +236,7 @@ export default function Home() {
                   clickAudio.play();
                 }}
               >
-                https://indransari.netlify.app/
+                https://indransari.netlify.app/ {" "}
                 <FontAwesomeIcon icon={faCopy} />
               </p>
             </div>
