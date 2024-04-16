@@ -51,6 +51,10 @@ export default function Home() {
 
   let clickAudio = new Audio("/click-47609.mp3");
 
+	useEffect(()=>{
+		console.log(" Loved the theme from Cory on spacehey.com,\n so I wanted to borrow some of the code he used \n check out his profile: https://spacehey.com/cory")
+	},[])
+
   return (
     <>
       <Helmet>
@@ -62,6 +66,7 @@ export default function Home() {
         <meta property="og:image" content="https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b6acb8586b9f46ec293ebbcab4b23881.jpg"/>
 				<link rel="canonical" href="/" />
       </Helmet>
+	
       <main>
         {/* PROFILE */}
         <div id="profile__container">
@@ -87,9 +92,9 @@ export default function Home() {
             <p id="mood">Mood: Excited!</p>
             <p id="link-blog">
               View My:
-              <a href="https://www.youtube.com/@chxshire22" target="_blank">
+              <a href="#" target="_blank">
                 {" "}
-                YouTube <FontAwesomeIcon icon={faArrowUpRightFromSquare} />{" "}
+                Blog (WIP) <FontAwesomeIcon icon={faArrowUpRightFromSquare} />{" "}
               </a>{" "}
               |
               <a
@@ -111,12 +116,8 @@ export default function Home() {
             <p>Let's work together!</p>
 
             <p>
-              My toolkit includes:
-              <br />
-              React, Express, NodeJs, NextJs <br />
-              However, I will always select the best tool for the job at hand,
-              even if it means learning a new language or framework.
-            </p>
+              I love surfing the web. I love building fun little sites and projects
+                          </p>
           </div>
         </section>
         {/* PROJECTS */}
