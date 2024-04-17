@@ -214,8 +214,9 @@ export default function Home(props) {
             </article>
           </div>
           <img
-            src="/hacking-lucy.gif"
+            src="/hacking-lucy-webp.webp"
             className="hacking-lucy"
+            loading="lazy"
             alt="gif of lucy hacking"
           />
           <small>yea I&apos;m a fan of Cyberpunk 2077 and Edgerunners...</small>
@@ -318,6 +319,7 @@ export default function Home(props) {
               <img
                 src="https://files.catbox.moe/vltthb.png"
                 alt="Velvet Blue"
+                loading="lazy"
               />
             </a>
           </li>
@@ -326,6 +328,7 @@ export default function Home(props) {
               <img
                 src="https://66.media.tumblr.com/b7d33d0507f67bb8506756cb85831ef0/178953e1b919a631-f1/s100x200/3a1b1d45a9b6e3f99acc62ca5f4cb1f708a816ce.gif"
                 alt="Cyber-rot link button"
+                loading="lazy"
               />
             </a>
           </li>
@@ -335,6 +338,7 @@ export default function Home(props) {
                 src="https://lintnaya.com/_assets/button.png"
                 title="I want to be a tomato"
                 alt="Lintaya link button "
+                loading="lazy"
               />
             </a>
           </li>
@@ -343,6 +347,7 @@ export default function Home(props) {
               <img
                 src="https://dimden.dev/services/images/88x31.gif"
                 alt="link to dimden"
+                loading="lazy"
               />
             </a>
           </li>
@@ -351,12 +356,17 @@ export default function Home(props) {
               <img
                 src="https://ghostmoor.neocities.org/background%20images/affiliate%20button%20animation.gif"
                 alt="link to ghostmoor"
+                loading="lazy"
               />
             </a>
           </li>
           <li>
             <a href="https://neocities.org/" target="_blank">
-              <img src="https://metaspace.neocities.org/Images/neocities.gif" />
+              <img
+                src="https://metaspace.neocities.org/Images/neocities.gif"
+                alt="link to neocities"
+                loading="lazy"
+              />
             </a>
           </li>
           <li>
@@ -364,6 +374,7 @@ export default function Home(props) {
               <img
                 src="https://starrs.neocities.org/graphics/webgoodies/buttons/users/tiny_space.gif"
                 alt="link to tiny space"
+                loading="lazy"
               />
             </a>
           </li>
@@ -372,6 +383,7 @@ export default function Home(props) {
               <img
                 src="https://metaspace.neocities.org/Images/MButton.gif"
                 alt="link to metaspace"
+                loading="lazy"
               />
             </a>
           </li>
@@ -379,6 +391,7 @@ export default function Home(props) {
             <a href="https://scarecat.neocities.org/" target="_blank">
               <img
                 alt="scarecat"
+                loading="lazy"
                 src="https://scarecat.neocities.org/scarecat.gif"
               />
             </a>
@@ -388,6 +401,7 @@ export default function Home(props) {
               <img
                 src="https://april.lexiqqq.com/images/button.gif"
                 alt="link to april"
+                loading="lazy"
               />
             </a>
           </li>
@@ -396,17 +410,26 @@ export default function Home(props) {
               <img
                 src="https://scarecat.neocities.org/assets/buttons/vagab0nd.gif"
                 alt="vagab0nd"
+                loading="lazy"
               />
             </a>
           </li>
           <li>
             <a href="https://monsieurdoll.neocities.org" target="_blank">
-              <img src="https://i.imgur.com/j85uDmZ.png" />
+              <img
+                src="https://i.imgur.com/j85uDmZ.png"
+                alt="link to monsieur doll"
+                loading="lazy"
+              />
             </a>
           </li>
           <li>
             <a href="https://www.lexiqqq.com/" target="_blank">
-              <img src="https://www.lexiqqq.com/assets/img/button_3.gif" />
+              <img
+                src="https://www.lexiqqq.com/assets/img/button_3.gif"
+                alt="link to lexiqqq"
+                loading="lazy"
+              />
             </a>
           </li>
           <li>
@@ -416,6 +439,7 @@ export default function Home(props) {
                 alt="Site Button"
                 width="88px"
                 height="31px"
+                loading="lazy"
               />
             </a>
           </li>

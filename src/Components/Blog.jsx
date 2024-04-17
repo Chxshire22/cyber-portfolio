@@ -47,7 +47,7 @@ export default function Blog(props) {
         <figure>
           <img src="/cybercity.gif" alt="cybercity" id="cybercity" />
           <figcaption>
-            just where i share my thoughts and things i&apos;ve learnt{" "}
+            my favorite way to view this site is in [purple]
           </figcaption>
         </figure>
         <ul>
