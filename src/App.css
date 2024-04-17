@@ -109,8 +109,25 @@ a {
   display: flex;
   flex-direction: column;
 }
+/* 
+.page-container{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+}
 
-
+@media screen and (min-width:768px) {
+  .page-container{
+    flex-direction: row;
+    margin-inline: auto;
+    
+  }
+  aside{
+    width: 5rem;
+  }
+  
+} */
 
 select{
 	outline: none;
@@ -183,6 +200,7 @@ main.home {
   flex-direction: column;
   border-image-slice: 1;
   margin-top: 1.5rem;
+  height: 100%;
 }
 
 .block-header {

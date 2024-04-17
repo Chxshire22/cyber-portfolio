@@ -81,6 +81,7 @@ export default function Home(props) {
         <ChangeColor siteColor={siteColor} setSiteColor={setSiteColor} />
       </header>
 
+
       <main className="home">
         {/* PROFILE */}
         <div id="profile__container">
@@ -298,7 +299,7 @@ export default function Home(props) {
                 required
                 id="contact-input"
                 cols="30"
-                rows="10"
+                rows="5"
                 placeholder="Hi, I was wondering if you can help me build a [insert site]"
               ></textarea>
             </section>

@@ -7,7 +7,7 @@ import NotFound from './Components/NotFound';
 import { useState } from 'react';
 
 function App() {
-	const [siteColor, setSiteColor] = useState("green");
+	const [siteColor, setSiteColor] = useState("purple");
 
 	const router = createBrowserRouter([
     {
