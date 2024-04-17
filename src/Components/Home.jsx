@@ -8,14 +8,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import pfp from "../assets/photo1712915487.jpeg";
 import { useState, useEffect } from "react";
-import {
-  collection,
-  query,
-  getDocs,
-} from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import { Helmet } from "react-helmet-async";
-
 
 export default function Home() {
   const [projectsArr, setProjectsArr] = useState([]);
@@ -52,9 +47,11 @@ export default function Home() {
 
   let clickAudio = new Audio("/click-47609.mp3");
 
-	useEffect(()=>{
-		console.log(" Loved the theme from Cory on spacehey.com,\n so I wanted to borrow some of the code he used \n check out his profile: https://spacehey.com/cory")
-	},[])
+  useEffect(() => {
+    console.log(
+      " Loved the theme from Cory on spacehey.com,\n so I wanted to borrow some of the code he used \n check out his profile: https://spacehey.com/cory"
+    );
+  }, []);
 
   return (
     <>
@@ -286,7 +283,6 @@ export default function Home() {
             <button type="submit" id="submit-btn">
               submit
             </button>
-            
           </form>
         </div>
       </main>
@@ -383,7 +379,14 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a href="https://monsieurdoll.neocities.org" target="_blank"><img src="https://i.imgur.com/j85uDmZ.png"/></a>
+            <a href="https://monsieurdoll.neocities.org" target="_blank">
+              <img src="https://i.imgur.com/j85uDmZ.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.lexiqqq.com/" target="_blank">
+              <img src="https://www.lexiqqq.com/assets/img/button_3.gif" />
+            </a>
           </li>
         </ul>
       </footer>
