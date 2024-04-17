@@ -16,6 +16,7 @@ import {
 import { db } from "../lib/firebase";
 import { Helmet } from "react-helmet-async";
 
+
 export default function Home() {
   const [projectsArr, setProjectsArr] = useState([]);
   const [currentProject, setCurrentProject] = useState({
@@ -58,26 +59,29 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Indra Ansari's Portfolio</title>
+        <title>Indra Ansari&apos;s Portfolio</title>
         <meta
           name="description"
           content="It's a little summary about me + links. Let's work together on a project!"
         />
-        <meta property="og:image" content="https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b6acb8586b9f46ec293ebbcab4b23881.jpg"/>
-				<link rel="canonical" href="/" />
+        <meta
+          property="og:image"
+          content="https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b6acb8586b9f46ec293ebbcab4b23881.jpg"
+        />
+        <link rel="canonical" href="/" />
       </Helmet>
-	
+
       <main>
         {/* PROFILE */}
         <div id="profile__container">
           {" "}
-          <h1 className="name" id="name">
+          <h1 className="name typewriter" id="name">
             Indra Ansari
           </h1>
           <section id="profile" className="profile">
             <img src={pfp} className="pfp" id="pfp" alt="" />
             <div className="profile-details">
-              <p>"Full-stack Web-Developer"</p>
+              <p>&quot;Full-stack Web-Developer&quot;</p>
               <p>
                 <FontAwesomeIcon
                   icon={faUser}
@@ -94,7 +98,9 @@ export default function Home() {
               View My:
               <a href="#" target="_blank">
                 {" "}
-                Blog (WIP) <FontAwesomeIcon icon={faArrowUpRightFromSquare} />{" "}
+                Blog (WIP) <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                />{" "}
               </a>{" "}
               |{" "}
               <a
@@ -113,11 +119,12 @@ export default function Home() {
           <div className="block-content">
             <p>Hi! I am a full-stack web-developer based in Singapore.</p>
 
-            <p>Let's work together!</p>
+            <p>Let&apos;s work together!</p>
 
             <p>
-              I love surfing the web. I love building fun little sites and projects
-                          </p>
+              I love surfing the web. I love building fun little sites and
+              projects
+            </p>
           </div>
         </section>
         {/* PROJECTS */}
@@ -188,6 +195,12 @@ export default function Home() {
               </div>
             </article>
           </div>
+          <img
+            src="/hacking-lucy.gif"
+            className="hacking-lucy"
+            alt="gif of lucy hacking"
+          />
+          <small>yea I&apos;m a fan of Cyberpunk 2077 and Edgerunners...</small>
         </section>
 
         <div className="right">
@@ -236,7 +249,7 @@ export default function Home() {
                   clickAudio.play();
                 }}
               >
-                https://indransari.netlify.app/ {" "}
+                https://indransari.netlify.app/{" "}
                 <FontAwesomeIcon icon={faCopy} />
               </p>
             </div>
@@ -273,9 +286,104 @@ export default function Home() {
             <button type="submit" id="submit-btn">
               submit
             </button>
+            <img src="https://i.imgur.com/j85uDmZ.png" alt="" />
           </form>
         </div>
       </main>
+      <footer>
+        <h4>here are some of my favourite sites:</h4>
+        <ul>
+          <li>
+            <a
+              href="https://humanityisnotbeautiful.neocities.org"
+              target="_blank"
+            >
+              <img
+                src="https://files.catbox.moe/vltthb.png"
+                alt="Velvet Blue"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://cyber-rot.neocities.org/" target="_blank">
+              <img
+                src="https://66.media.tumblr.com/b7d33d0507f67bb8506756cb85831ef0/178953e1b919a631-f1/s100x200/3a1b1d45a9b6e3f99acc62ca5f4cb1f708a816ce.gif"
+                alt="Cyber-rot link button"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://lintnaya.com/" target="_blank">
+              <img
+                src="https://lintnaya.com/_assets/button.png"
+                title="I want to be a tomato"
+                alt="Lintaya link button "
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://dimden.dev/" target="_blank">
+              <img
+                src="https://dimden.dev/services/images/88x31.gif"
+                alt="link to dimden"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://ghostmoor.gay/" target="_blank">
+              <img
+                src="https://ghostmoor.neocities.org/background%20images/affiliate%20button%20animation.gif"
+                alt="link to ghostmoor"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://neocities.org/" target="_blank">
+              <img src="https://metaspace.neocities.org/Images/neocities.gif" />
+            </a>
+          </li>
+          <li>
+            <a href="https://starrs.neocities.org/" target="_blank">
+              <img
+                src="https://starrs.neocities.org/graphics/webgoodies/buttons/users/tiny_space.gif"
+                alt="link to tiny space"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://metaspace.neocities.org/" target="_blank">
+              <img
+                src="https://metaspace.neocities.org/Images/MButton.gif"
+                alt="link to metaspace"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://scarecat.neocities.org/" target="_blank">
+              <img
+                alt="scarecat"
+                src="https://scarecat.neocities.org/scarecat.gif"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://april.lexiqqq.com/" target="_blank">
+              <img
+                src="https://april.lexiqqq.com/images/button.gif"
+                alt="link to april"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://vagab0nd.neocities.org/">
+              <img
+                src="https://scarecat.neocities.org/assets/buttons/vagab0nd.gif"
+                alt="vagab0nd"
+              />
+            </a>
+          </li>
+        </ul>
+      </footer>
     </>
   );
 }
