@@ -90,6 +90,18 @@ export default function Blog(props) {
                   <li> - future web dev plans </li>
                   <li> - current things im working on </li>
                 </ul>
+                <br />
+                song of the day:
+                <br />
+                <iframe
+                  loading="lazy"
+                  src="https://www.youtube.com/embed/EgdMweSmfUU?si=GrPZRvdiVaPmhPaK?autoplay=1"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </p>
             </div>
           </li>
