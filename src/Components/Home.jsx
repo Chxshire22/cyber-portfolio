@@ -6,7 +6,7 @@ import {
   faArrowLeft,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import pfp from "../assets/photo1712915487.jpeg";
+import pfp from "../assets/photo1712915487.webp";
 import { useState, useEffect } from "react";
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
