@@ -286,7 +286,7 @@ export default function Home() {
             <button type="submit" id="submit-btn">
               submit
             </button>
-            <img src="https://i.imgur.com/j85uDmZ.png" alt="" />
+            
           </form>
         </div>
       </main>
@@ -381,6 +381,9 @@ export default function Home() {
                 alt="vagab0nd"
               />
             </a>
+          </li>
+          <li>
+            <a href="https://monsieurdoll.neocities.org" target="_blank"><img src="https://i.imgur.com/j85uDmZ.png"/></a>
           </li>
         </ul>
       </footer>
