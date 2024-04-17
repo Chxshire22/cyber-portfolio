@@ -1,13 +1,32 @@
+/* variables> */
+
+
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root{
+	--color-green:  #00c600;
+	--color-purple: rgb(255, 0, 242);
+}
 * {
   /* background-color: black; */
   box-sizing: border-box;
 }
+
+[data-color="green"]{
+	color: var(--color-green);
+	background-color: black;
+}
+
+[data-color="purple"]{
+	color: var(--color-purple);
+	background-color: black;
+}
+
+
 body {
   font-family: "IBM Plex Mono", monospace;
   margin: 0;
-  color: #00c600;
   background-color: black;
   animation: textShadow 1.6s infinite;
 }
@@ -32,6 +51,10 @@ h1 {
   font-size: 2rem;
 }
 
+h1.not-found{
+	text-align: center;
+}
+
 h4 {
   margin-block: 0.5rem;
 }
@@ -46,9 +69,21 @@ p {
   margin-block: 0.5rem;
 }
 
+p.date{
+	font-size: x-small;
+}
+
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.inner-link{
+	border: 2px solid ;
+	width: fit-content;
+	padding-inline: 1rem;
+	margin-inline: auto;
 }
 
 .typewriter {
@@ -75,6 +110,13 @@ a {
   flex-direction: column;
 }
 
+
+
+select{
+	outline: none;
+	border: none;
+}
+
 #mood {
   margin-bottom: 0.5rem;
   padding-left: 1rem;
@@ -84,20 +126,27 @@ a {
   padding-left: 1rem;
 }
 
+ul{
+	padding: 0;
+}
+
 footer > ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-	padding: 0;
 }
 
 li {
   list-style: none;
 }
 
-main {
+li.block{
+	padding: 1rem;
+}
+
+main.home {
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -112,16 +161,19 @@ main {
   gap: 1rem;
 }
 
+.header-flex{
+	width: 100dvw;
+	display: flex;
+	flex-direction: column;
+
+}
+
 /* images */
 #pfp {
   aspect-ratio: 1/1;
   width: 40%;
   object-fit: cover;
   object-position: center;
-}
-
-#online-user {
-  color: #00c600;
 }
 
 /* blocks */
@@ -135,8 +187,23 @@ main {
 
 .block-header {
   border: 2px solid;
-
   padding-left: 1rem;
+}
+
+li>.block-header{
+	display: flex;
+	flex-direction: row;
+}
+
+li>.block-header>h4{
+	flex-grow: 1;
+}
+li>.block-header>div>button{
+	height: 100%;
+}
+
+li.block{
+  margin-top: 0;
 }
 
 .block-content {
@@ -144,6 +211,14 @@ main {
   border-top: none;
   padding-inline: 1rem;
   padding-block: 0.5rem;
+}
+
+.hidden{
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  
 }
 
 .two-x-two-grid {
@@ -213,7 +288,7 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  main {
+  main.home {
     display: grid !important;
     margin-inline: auto;
     grid-template-columns: repeat(2, 1fr);
@@ -241,12 +316,43 @@ main {
   }
 }
 
-.hacking-lucy {
+header>div>.blog__header, .blog{
+	max-width: 1024px;
+	margin: auto;
+	/* color: rgb(255, 0, 242); */
+}
+
+header>h1.blog__header{
+	margin-block: 1rem;
+	margin-inline: auto;
+	text-align: center;
+}
+
+main.blog{
+	width: 100dvw;
+}
+
+#cybercity{
+	width: 100%;
+}
+
+button{
+	cursor: pointer;
+}
+
+ [data-color="green"] .hacking-lucy {
   object-fit: cover;
   object-position: center;
   height: 10rem;
   margin-top: 1rem;
   filter: sepia(100%) hue-rotate(45deg) saturate(5);
+}
+ [data-color="purple"] .hacking-lucy {
+  object-fit: cover;
+  object-position: center;
+  height: 10rem;
+  margin-top: 1rem;
+  filter: sepia(100%) hue-rotate(270deg) saturate(5);
 }
 
 @media screen and (min-height: 650px) and (min-width: 768px) {
@@ -286,7 +392,7 @@ main {
 input,
 button {
   background-color: black;
-  color: #00c600;
+  /* color: var(--color-green); */
   outline: none;
   width: 100%;
   border: none;
@@ -298,7 +404,6 @@ button {
 }
 
 #submit-btn {
-  cursor: pointer;
   border: 2px solid;
 }
 

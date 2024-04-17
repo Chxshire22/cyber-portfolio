@@ -11,8 +11,14 @@ import { useState, useEffect } from "react";
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import ChangeColor from "./UI/ChangeColor";
 
-export default function Home() {
+export default function Home(props) {
+  let {
+    siteColor,
+    setSiteColor
+  } = props
   const [projectsArr, setProjectsArr] = useState([]);
   const [currentProject, setCurrentProject] = useState({
     title: "",
@@ -53,6 +59,10 @@ export default function Home() {
     );
   }, []);
 
+  useEffect(()=>{
+    console.log(siteColor)
+  },[siteColor])
+
   return (
     <>
       <Helmet>
@@ -67,8 +77,11 @@ export default function Home() {
         />
         <link rel="canonical" href="/" />
       </Helmet>
+      <header>
+        <ChangeColor siteColor={siteColor} setSiteColor={setSiteColor} />
+      </header>
 
-      <main>
+      <main className="home">
         {/* PROFILE */}
         <div id="profile__container">
           {" "}
@@ -92,20 +105,28 @@ export default function Home() {
           <section className="flex-col">
             <p id="mood">Mood: Excited!</p>
             <p id="link-blog">
-              View My:
-              <a href="#" target="_blank">
-                {" "}
-                Blog (WIP) <FontAwesomeIcon
-                  icon={faArrowUpRightFromSquare}
-                />{" "}
-              </a>{" "}
-              |{" "}
-              <a
-                href="https://www.instagram.com/eternl_sunshine/"
-                target="_blank"
+              View My:{" "}
+              <Link
+                to="/blog"
+                className="inner-link"
+                onClick={() => {
+                  clickAudio.volume = 0.05;
+                  clickAudio.play();
+                }}
               >
-                Instagram <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </a>
+                Blog
+              </Link>{" "}
+              |{" "}
+              <Link
+                to="#"
+                className="inner-link"
+                onClick={() => {
+                  clickAudio.volume = 0.05;
+                  clickAudio.play();
+                }}
+              >
+                Gallery (WIP)
+              </Link>
             </p>
           </section>
         </div>
@@ -280,7 +301,7 @@ export default function Home() {
                 placeholder="Hi, I was wondering if you can help me build a [insert site]"
               ></textarea>
             </section>
-            <button type="submit" id="submit-btn">
+            <button type="submit" id="submit-btn" data-color={siteColor}>
               submit
             </button>
           </form>
@@ -386,6 +407,16 @@ export default function Home() {
           <li>
             <a href="https://www.lexiqqq.com/" target="_blank">
               <img src="https://www.lexiqqq.com/assets/img/button_3.gif" />
+            </a>
+          </li>
+          <li>
+            <a href="https://hotlinecafe.neocities.org/" target="_blank">
+              <img
+                src="https://hotlinecafe.com/buttons/hotlinecafebutton_old2.gif"
+                alt="Site Button"
+                width="88px"
+                height="31px"
+              />
             </a>
           </li>
         </ul>
