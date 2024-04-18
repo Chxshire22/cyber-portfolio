@@ -7,6 +7,7 @@ export default function ChangeColor(props){
   
   return (
     <>
+    <label htmlFor="colors"></label>
       <select
         name="colors"
         id="colors"
@@ -14,8 +15,8 @@ export default function ChangeColor(props){
         onChange={(e) => setSiteColor(e.target.value)}
         defaultValue={siteColor}
       >
-        <option label="green" value="green">Green</option>
-        <option label="purple" value="purple">Purple</option>
+        <option label="green" value="green"></option>
+        <option label="purple" value="purple"></option>
       </select>
     </>
   );

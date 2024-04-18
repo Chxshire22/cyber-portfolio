@@ -1,5 +1,8 @@
 import ChangeColor from "./UI/ChangeColor";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import blogScreen from "../assets/screenshot-2024-04-19-032605-662173da533d5.webp";
+import cyberCity from "../assets/cybercity.webp";
 
 export default function Blog(props) {
   let { siteColor, setSiteColor } = props;
@@ -26,6 +29,16 @@ export default function Blog(props) {
 
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Welcome little blog for things regarding web-development, the old web and maybe stuff about frontend tricks I found and API designs I like"
+        />
+        <meta property="og:image" content={blogScreen} />
+        <title>Indra&apos;s Tech Blog</title>
+        <link rel="preload" as="image" href={cyberCity} />
+        <link rel="canonical" href="https://indransari.netlify.app/blog" />
+      </Helmet>
       <header>
         <ChangeColor siteColor={siteColor} setSiteColor={setSiteColor} />
         <div className="header-flex">
@@ -44,13 +57,18 @@ export default function Blog(props) {
       </header>
       <main className="blog">
         <figure>
-          <img src="/cybercity.gif" alt="cybercity" id="cybercity" />
+          <img
+            src={cyberCity}
+            fetchPriority="high"
+            alt="cybercity"
+            id="cybercity"
+          />
           <figcaption>
             my favorite way to view this site is in [purple]
           </figcaption>
         </figure>
         <ul>
-          <li className="block" title='git commit -m "initial commit"'>
+          <article className="block" title='git commit -m "initial commit"'>
             <div className="block-header">
               <h4>git commit -m &quot;initial commit&quot;</h4>
               <div>
@@ -103,7 +121,7 @@ export default function Blog(props) {
                 ></iframe>
               </p>
             </div>
-          </li>
+          </article>
         </ul>
       </main>
     </>
