@@ -81,7 +81,7 @@ export default function Home(props) {
         <ChangeColor siteColor={siteColor} setSiteColor={setSiteColor} />
       </header>
 
-
+<div className="page-container">
       <main className="home">
         {/* PROFILE */}
         <div id="profile__container">
@@ -157,7 +157,6 @@ export default function Home(props) {
               className="carousel-image"
               src={currentProject.imgUrl}
               alt={`image of ${currentProject.title}`}
-              loading="lazy"
             />
             <article className="carousel__content">
               <h3 id="project-title">{currentProject.title}</h3>
@@ -223,7 +222,9 @@ export default function Home(props) {
           <small>yea I&apos;m a fan of Cyberpunk 2077 and Edgerunners...</small>
         </section>
 
-        <div className="right">
+
+{/* contact */}
+        <div className="left">
           <section className="block" id="contact">
             <div className="block-header">
               <h4>Contact</h4>
@@ -254,6 +255,7 @@ export default function Home(props) {
               </a>
             </div>
           </section>
+          {/* get url  */}
           <section className="block" id="url">
             <div className="block-header">
               <h4>Copy This Portfolio Url</h4>
@@ -274,6 +276,8 @@ export default function Home(props) {
               </p>
             </div>
           </section>
+
+          {/* contact form */}
           <form
             id="contact-form"
             method="post"
@@ -307,10 +311,11 @@ export default function Home(props) {
               submit
             </button>
           </form>
+          
         </div>
       </main>
-      <footer>
-        <h4>here are some of my favourite sites:</h4>
+      <aside>
+        <h4>my fav sites:</h4>
         <ul>
           <li>
             <a
@@ -445,7 +450,8 @@ export default function Home(props) {
             </a>
           </li>
         </ul>
-      </footer>
+      </aside>
+      </div>
     </>
   );
 }
