@@ -5,6 +5,8 @@ import Home from './Components/Home';
 import Blog from './Components/Blog';
 import NotFound from './Components/NotFound';
 import { useState } from 'react';
+import { HelmetProvider } from "react-helmet-async";
+
 
 function App() {
 	const [siteColor, setSiteColor] = useState("purple");
@@ -25,9 +27,11 @@ function App() {
   ]);
   return (
     <div data-color={siteColor}>
-		<RouterProvider router={router}/>
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </div>
-  )
+  );
 }
 
 export default App

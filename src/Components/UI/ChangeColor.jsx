@@ -14,8 +14,8 @@ export default function ChangeColor(props){
         onChange={(e) => setSiteColor(e.target.value)}
         defaultValue={siteColor}
       >
-        <option value="green">Green</option>
-        <option value="purple">Purple</option>
+        <option label="green" value="green">Green</option>
+        <option label="purple" value="purple">Purple</option>
       </select>
     </>
   );
