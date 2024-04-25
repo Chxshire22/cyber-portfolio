@@ -6,6 +6,7 @@ import Blog from './Components/Blog';
 import NotFound from './Components/NotFound';
 import { useState } from 'react';
 import { HelmetProvider } from "react-helmet-async";
+import {ThemeContext} from './lib/context';
 
 
 function App() {
@@ -14,11 +15,11 @@ function App() {
 	const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home setSiteColor={setSiteColor} siteColor={siteColor} />,
+      element: <Home/>,
     },
     {
       path: "/blog",
-      element: <Blog setSiteColor={setSiteColor} siteColor={siteColor} />,
+      element: <Blog/>,
     },
     {
       path: "*",
@@ -27,9 +28,11 @@ function App() {
   ]);
   return (
     <div data-color={siteColor}>
+		<ThemeContext.Provider value={{ siteColor, setSiteColor }}>
       <HelmetProvider>
         <RouterProvider router={router} />
       </HelmetProvider>
+		</ThemeContext.Provider>
     </div>
   );
 }

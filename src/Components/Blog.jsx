@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import blogScreen from "../assets/screenshot-2024-04-19-032605-662173da533d5.webp";
 import cyberCity from "../assets/cybercity.webp";
+import {useThemeContext} from "../lib/context";
 
-export default function Blog(props) {
-  let { siteColor, setSiteColor } = props;
+export default function Blog() {
+	const theme = useThemeContext()
+	const { siteColor, setSiteColor } = theme
 
   function toggleContentVisibility(event) {
     const button = event.target;

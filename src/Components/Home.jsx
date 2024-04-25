@@ -13,9 +13,11 @@ import { db } from "../lib/firebase";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ChangeColor from "./UI/ChangeColor";
+import { useThemeContext } from "../lib/context";
 
-export default function Home(props) {
-  let { siteColor, setSiteColor } = props;
+export default function Home() {
+	const theme = useThemeContext()
+	const { siteColor, setSiteColor } = theme
   const [projectsArr, setProjectsArr] = useState([]);
   const [currentProject, setCurrentProject] = useState({
     title: "",
