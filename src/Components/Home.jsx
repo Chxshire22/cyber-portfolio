@@ -160,15 +160,19 @@ export default function Home() {
             </div>
             <div className="block-content">
               {" "}
-              <img
-                className="carousel-image"
-                src={currentProject.imgUrl}
-                alt={`image of ${currentProject.title}`}
-                fetchPriority="high"
-              />
+              <div className="carousel-image__container">
+                <img
+                  className="carousel-image"
+                  src={currentProject.imgUrl}
+                  alt={`image of ${currentProject.title}`}
+                  fetchPriority="high"
+                />
+              </div>
               <article className="carousel__content">
                 <h3 id="project-title">{currentProject.title}</h3>
-                <p id="project-description">{currentProject.description}</p>
+                <div className="project-description__container">
+                  <p id="project-description">{currentProject.description}</p>
+                </div>
                 <div className="carousel__content-linknav">
                   <div className="carousel-link">
                     <a
